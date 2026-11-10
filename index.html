@@ -83,9 +83,9 @@ html, body {
 /* 公式區：允許向下滾動檢視全部內容，高度約 1.5 倍 */
 #detailedFormulaDisplay {
   overflow-y: auto;
-  line-height: 1.4;
-  min-height: calc(1.4em * 2 * 1.5);
-  max-height: calc(1.4em * 2 * 1.5);
+  line-height: 1.35;
+  min-height: calc(1.35em * 2 * 1.4);
+  max-height: calc(1.35em * 2 * 1.4);
 }
 /* 輸入表單自動縮放時的過渡 */
 #itemForm {
@@ -101,15 +101,15 @@ html, body {
 }
 </style>
 </head>
-<body class="p-1.5 md:p-2 text-slate-800 select-none flex flex-col h-screen overflow-hidden">
-<div id="scaleWrapper" class="max-w-[1600px] w-full mx-auto flex flex-col h-full space-y-1.5 md:space-y-2 min-h-0">
+<body class="p-1 md:p-1.5 text-slate-800 select-none flex flex-col h-screen overflow-hidden">
+<div id="scaleWrapper" class="max-w-[1600px] w-full mx-auto flex flex-col h-full space-y-1 md:space-y-1.5 min-h-0">
 
 <!-- ================= 頂部頁頭與控制區 ================= -->
-<header class="kids-card bg-amber-300 px-2.5 py-1.5 flex-shrink-0">
-<div class="flex items-center justify-between gap-2 flex-wrap sm:flex-nowrap">
+<header class="kids-card bg-amber-300 px-2 py-1 flex-shrink-0">
+<div class="flex items-center justify-between gap-1.5 flex-wrap sm:flex-nowrap">
 <!-- 標題與 Icon -->
-<div class="flex items-center space-x-2">
-<div class="bg-white px-2 py-0.5 rounded-xl border-2 border-slate-800 shadow-sm text-fluid-lg">
+<div class="flex items-center space-x-1.5">
+<div class="bg-white px-1.5 py-0.5 rounded-xl border-2 border-slate-800 shadow-sm text-fluid-lg">
 🛒
 </div>
 <div>
@@ -119,23 +119,23 @@ html, body {
 </div>
 </div>
 <!-- 預算與活動人數輸入區域 -->
-<div class="flex items-center gap-2 flex-wrap">
+<div class="flex items-center gap-1.5 flex-wrap">
 <!-- 預算輸入 -->
-<div class="flex items-center space-x-1 bg-emerald-100 border-2 border-emerald-400 px-2 py-0.5 rounded-xl">
+<div class="flex items-center space-x-1 bg-emerald-100 border-2 border-emerald-400 px-1.5 py-0.5 rounded-xl">
 <label for="totalBudget" class="text-fluid-xs font-black text-emerald-950 flex items-center gap-1 shrink-0">
 <i class="fa-solid fa-wallet text-emerald-600"></i> 預算($)：
 </label>
 <input type="number" id="totalBudget" min="0" value="500" step="any"
-class="w-20 text-center text-fluid-xs font-extrabold text-emerald-700 kids-input bg-white py-0.5"
+class="w-18 text-center text-fluid-xs font-extrabold text-emerald-700 kids-input bg-white py-0.5"
 oninput="render()">
 </div>
 <!-- 人數輸入 -->
-<div class="flex items-center space-x-1 bg-indigo-100 border-2 border-indigo-400 px-2 py-0.5 rounded-xl">
+<div class="flex items-center space-x-1 bg-indigo-100 border-2 border-indigo-400 px-1.5 py-0.5 rounded-xl">
 <label for="activityPeople" class="text-fluid-xs font-black text-indigo-950 flex items-center gap-1 shrink-0">
 <i class="fa-solid fa-users text-indigo-600"></i> 人數：
 </label>
 <input type="number" id="activityPeople" min="1" value="5" step="1"
-class="w-12 text-center text-fluid-xs font-extrabold text-indigo-700 kids-input bg-white py-0.5"
+class="w-11 text-center text-fluid-xs font-extrabold text-indigo-700 kids-input bg-white py-0.5"
 oninput="render()">
 <span class="text-fluid-xs font-black text-indigo-950 shrink-0">人</span>
 </div>
@@ -143,11 +143,11 @@ oninput="render()">
 </div>
 </header>
 <!-- ================= 主要兩欄 Layout (左 1/5 比例, 右 4/5 比例) ================= -->
-<main class="grid grid-cols-1 md:grid-cols-5 gap-1.5 md:gap-2 flex-1 min-h-0 overflow-hidden">
+<main class="grid grid-cols-1 md:grid-cols-5 gap-1 md:gap-1.5 flex-1 min-h-0 overflow-hidden">
 
 <!-- ================= 左欄：輸入購物資料 ================= -->
 <section class="md:col-span-1 flex flex-col h-full min-h-0">
-<div class="kids-card bg-white p-2 flex flex-col h-full justify-between overflow-hidden">
+<div class="kids-card bg-white p-1.5 flex flex-col h-full justify-between overflow-hidden">
 
 <div class="flex items-center justify-between border-b-2 border-amber-200 pb-0.5 flex-shrink-0">
 <h2 class="text-fluid-xs font-black text-indigo-700 flex items-center gap-1 truncate">
@@ -158,14 +158,14 @@ oninput="render()">
 </span>
 </div>
 <!-- 表單：移除 overflow-y-auto，改由 JS 自動縮放字級以完整顯示 -->
-<form id="itemForm" onsubmit="handleFormSubmit(event)" class="flex-1 flex flex-col justify-between py-1 space-y-1 text-fluid-xs min-h-0">
+<form id="itemForm" onsubmit="handleFormSubmit(event)" class="flex-1 flex flex-col justify-between py-0.5 space-y-0.5 text-fluid-xs min-h-0">
 <input type="hidden" id="editingId" value="">
 <!-- 類別選單 -->
 <div class="flex flex-col space-y-0.5">
 <label class="font-extrabold text-slate-700">
 類別 <span class="text-rose-500">*</span>：
 </label>
-<select id="itemCategory" class="w-full p-1 text-fluid-xs font-bold text-slate-800 kids-input bg-sky-50">
+<select id="itemCategory" class="w-full p-0.5 text-fluid-xs font-bold text-slate-800 kids-input bg-sky-50">
 <option value="食物種類A">食物種類A</option>
 <option value="食物種類B">食物種類B</option>
 <option value="食物種類C">食物種類C</option>
@@ -179,7 +179,7 @@ oninput="render()">
 物品名稱 <span class="text-rose-500">*</span>：
 </label>
 <input type="text" id="itemName" placeholder="例如：珍珍薯片" required
-class="w-full p-1 text-fluid-xs font-bold kids-input">
+class="w-full p-0.5 text-fluid-xs font-bold kids-input">
 </div>
 <!-- 包裝件數：預設空白、必填；「每包」與數字隔疏、靠左 -->
 <div class="flex flex-col space-y-0.5">
@@ -187,10 +187,10 @@ class="w-full p-1 text-fluid-xs font-bold kids-input">
 包裝件數 <span class="text-rose-500">*</span>：
 </label>
 <div class="relative flex items-center">
-<span class="absolute left-2 text-fluid-xs font-bold text-slate-400 pointer-events-none">每包</span>
+<span class="absolute left-1.5 text-fluid-xs font-bold text-slate-400 pointer-events-none">每包</span>
 <input type="number" id="itemPackaging" min="1" step="any" placeholder="6" required
-class="w-full pl-12 pr-7 p-1 text-fluid-xs font-bold kids-input text-left">
-<span class="absolute right-2 text-fluid-xs font-bold text-slate-400 pointer-events-none">件</span>
+class="w-full pl-11 pr-6 p-0.5 text-fluid-xs font-bold kids-input text-left">
+<span class="absolute right-1.5 text-fluid-xs font-bold text-slate-400 pointer-events-none">件</span>
 </div>
 </div>
 <!-- 單售價與購買數量：預設空白、必填 -->
@@ -201,7 +201,7 @@ class="w-full pl-12 pr-7 p-1 text-fluid-xs font-bold kids-input text-left">
 </label>
 <input type="number" id="itemPrice" min="0" step="any" placeholder="0" required
 oninput="calculateFormSubtotal()"
-class="w-full p-1 text-fluid-xs font-bold kids-input bg-orange-50">
+class="w-full p-0.5 text-fluid-xs font-bold kids-input bg-orange-50">
 </div>
 <div class="flex flex-col space-y-0.5">
 <label class="font-extrabold text-slate-700 truncate">
@@ -209,24 +209,24 @@ class="w-full p-1 text-fluid-xs font-bold kids-input bg-orange-50">
 </label>
 <input type="number" id="itemQty" min="1" step="any" placeholder="1" required
 oninput="calculateFormSubtotal()"
-class="w-full p-1 text-fluid-xs font-bold kids-input bg-orange-50">
+class="w-full p-0.5 text-fluid-xs font-bold kids-input bg-orange-50">
 </div>
 </div>
 <!-- 單項總價預覽 -->
-<div class="bg-indigo-50 border border-indigo-200 rounded-lg p-1 flex justify-between items-center my-0.5 shrink-0">
+<div class="bg-indigo-50 border border-indigo-200 rounded-lg p-0.5 flex justify-between items-center my-0.5 shrink-0">
 <span class="font-bold text-indigo-900 flex items-center gap-0.5">
 <i class="fa-solid fa-calculator text-indigo-500"></i> 單項預覽:
 </span>
 <span class="font-black text-indigo-600 text-fluid-sm" id="formSubtotalDisplay">$ 0</span>
 </div>
 <!-- 按鈕區：主按鈕兼任加入／儲存修改；已移除獨立「儲存」鍵 -->
-<div class="flex flex-col space-y-1 flex-shrink-0 pt-0.5">
+<div class="flex flex-col space-y-0.5 flex-shrink-0 pt-0.5">
 <button type="submit" id="addBtn"
-class="kids-btn bg-emerald-400 hover:bg-emerald-500 text-slate-900 font-extrabold py-1.5 rounded-lg flex items-center justify-center gap-1 text-fluid-xs">
+class="kids-btn bg-emerald-400 hover:bg-emerald-500 text-slate-900 font-extrabold py-1 rounded-lg flex items-center justify-center gap-1 text-fluid-xs">
 <i class="fa-solid fa-plus"></i> <span id="addBtnText">加入購物清單</span>
 </button>
 <button type="button" onclick="clearForm()"
-class="kids-btn bg-slate-200 hover:bg-slate-300 text-slate-800 font-extrabold py-1 rounded-lg flex items-center justify-center gap-1 text-fluid-xs">
+class="kids-btn bg-slate-200 hover:bg-slate-300 text-slate-800 font-extrabold py-0.5 rounded-lg flex items-center justify-center gap-1 text-fluid-xs">
 <i class="fa-solid fa-rotate-left"></i> 清除
 </button>
 </div>
@@ -235,35 +235,35 @@ class="kids-btn bg-slate-200 hover:bg-slate-300 text-slate-800 font-extrabold py
 </section>
 <!-- ================= 右欄：已輸入購物清單 ================= -->
 <section class="md:col-span-4 flex flex-col h-full min-h-0">
-<div class="kids-card bg-white p-2 md:p-2.5 flex-1 flex flex-col min-h-0 space-y-1.5">
-<div class="flex items-center justify-between border-b-2 border-sky-200 pb-1 flex-shrink-0">
+<div class="kids-card bg-white p-1.5 md:p-2 flex-1 flex flex-col min-h-0 space-y-1">
+<div class="flex items-center justify-between border-b-2 border-sky-200 pb-0.5 flex-shrink-0">
 <h2 class="text-fluid-base font-black text-sky-700 flex items-center gap-1.5">
 <i class="fa-solid fa-clipboard-list"></i> 已輸入購物清單
 </h2>
-<span class="text-fluid-xs font-bold text-sky-800 bg-sky-100 px-2 py-0.5 rounded-full border border-sky-300">
+<span class="text-fluid-xs font-bold text-sky-800 bg-sky-100 px-1.5 py-0.5 rounded-full border border-sky-300">
 依類別分組排列
 </span>
 </div>
-<div class="flex-1 overflow-y-auto min-h-0 pr-1 space-y-2" id="categoryContainers">
+<div class="flex-1 overflow-y-auto min-h-0 pr-0.5 space-y-1.5" id="categoryContainers">
 <!-- JS 動態繪製內容 -->
 </div>
 </div>
 </section>
 </main>
 <!-- ================= 下方：公式區加高 1.5 倍，三格同步縮短 ================= -->
-<footer class="kids-card bg-amber-100 p-1.5 md:p-2 flex-shrink-0 flex flex-col space-y-1 min-h-0">
+<footer class="kids-card bg-amber-100 p-1 md:p-1.5 flex-shrink-0 flex flex-col space-y-0.5 min-h-0">
 <!-- 1. 詳細算式列（高度約 1.5 倍，可滾動） -->
-<div class="bg-white px-2 py-2 rounded-xl border-2 border-amber-300 space-y-1 shadow-sm flex-1 min-h-0 flex flex-col">
+<div class="bg-white px-1.5 py-1 rounded-xl border-2 border-amber-300 space-y-0.5 shadow-sm flex-1 min-h-0 flex flex-col">
 <div class="text-fluid-xs font-black text-slate-600 flex items-center justify-between flex-shrink-0">
 <span><i class="fa-solid fa-calculator text-amber-600 mr-1"></i>已勾選項目的詳細組合算式：</span>
 <span class="text-slate-400 font-normal text-fluid-xs"></span>
 </div>
-<div id="detailedFormulaDisplay" class="text-fluid-xs font-extrabold text-slate-800 break-words leading-tight bg-amber-50/70 px-1.5 py-1.5 rounded-lg border border-amber-200 flex-1 min-h-0 overflow-y-auto">
+<div id="detailedFormulaDisplay" class="text-fluid-xs font-extrabold text-slate-800 break-words leading-tight bg-amber-50/70 px-1 py-1 rounded-lg border border-amber-200 flex-1 min-h-0 overflow-y-auto">
 <!-- JS 動態寫入內容 -->
 </div>
 </div>
 <!-- 2. 三格摘要（高度再縮短，剛好包住文字） -->
-<div class="grid grid-cols-3 gap-1 md:gap-1.5 flex-none">
+<div class="grid grid-cols-3 gap-1 flex-none">
 <div class="bg-white px-1 py-0 rounded-md border-2 border-amber-300 flex flex-row items-center justify-center gap-0.5 min-h-0">
 <span class="text-fluid-xs font-bold text-slate-600 shrink-0">勾選總支出：</span>
 <span id="summaryTotalSpent" class="text-fluid-sm font-black text-indigo-600 leading-none">$ 0</span>
@@ -293,7 +293,7 @@ const DEFAULT_VISIBLE_CATEGORIES = ['食物種類A', '食物種類B', '飲品類
 // 所有支援的類別清單
 const ALL_CATEGORIES = ['食物種類A', '食物種類B', '食物種類C', '飲品類', '其他'];
 
-// ========== 整頁自動縮放核心邏輯 ==========
+// ========== 整頁自動縮放核心邏輯（針對 iPad 9 橫向優化） ==========
 function autoScalePage() {
   const wrapper = document.getElementById('scaleWrapper');
   if (!wrapper) return;
@@ -322,8 +322,8 @@ function autoScalePage() {
     1 // 不放大超過 100%
   );
 
-  // 設定下限，避免過小導致無法操作
-  const minScale = 0.55;
+  // 設定下限，避免過小導致無法操作（iPad 9 橫向建議不低于 0.52）
+  const minScale = 0.52;
   if (scale < minScale) scale = minScale;
 
   // 套用縮放
@@ -344,8 +344,9 @@ window.onload = function() {
   calculateFormSubtotal();
   render();
   fitFormContent();
-  // 延遲一點執行整頁縮放，確保 DOM 與字型都已就緒
-  setTimeout(autoScalePage, 50);
+  // 延遲執行整頁縮放，確保 DOM 與字型都已就緒（iPad 需要稍長時間）
+  setTimeout(autoScalePage, 80);
+  setTimeout(autoScalePage, 200); // 二次確認，避免字型載入延遲
 };
 
 // 視窗大小改變時重新縮放
@@ -389,7 +390,7 @@ function fitFormContent() {
   if (availableHeight <= 0) return;
 
   let currentSize = 100; // 百分比
-  const minSize = 55;    // 最小縮放比例，避免過小
+  const minSize = 52;    // 最小縮放比例，避免過小
   const step = 2;
 
   // 逐步縮小直到內容完整容納
@@ -558,7 +559,7 @@ function fitFormulaToTwoLines() {
   el.style.fontSize = '';
   if (el.querySelector('.text-slate-400')) return;
   const computed = getComputedStyle(el);
-  const lineHeight = parseFloat(computed.lineHeight) || (parseFloat(computed.fontSize) * 1.4);
+  const lineHeight = parseFloat(computed.lineHeight) || (parseFloat(computed.fontSize) * 1.35);
   const maxHeight = lineHeight * 2 + 2;
   let fontSize = parseFloat(computed.fontSize);
   const minFontSize = 9;
@@ -608,10 +609,10 @@ function render() {
       cardBorderStyle = 'border-purple-300 bg-purple-50/40';
     }
     const catCard = document.createElement('div');
-    catCard.className = `rounded-xl border-2 p-1.5 md:p-2 ${cardBorderStyle} space-y-1`;
+    catCard.className = `rounded-xl border-2 p-1.5 ${cardBorderStyle} space-y-1`;
     let catHeaderHtml = `
 <div class="flex items-center justify-between border-b pb-0.5 border-slate-300/60">
-<span class="text-fluid-xs font-black px-2 py-0.5 rounded-lg shadow-sm ${headerBadgeStyle}">
+<span class="text-fluid-xs font-black px-1.5 py-0.5 rounded-lg shadow-sm ${headerBadgeStyle}">
 📌 ${cat}
 </span>
 <span class="text-fluid-xs font-bold text-slate-500">
@@ -632,11 +633,11 @@ function render() {
       catItems.forEach(item => {
         const itemSubtotal = item.price * item.qty;
         const itemEl = document.createElement('div');
-        itemEl.className = `p-1.5 rounded-lg border-2 transition-all flex items-center justify-between gap-2 ${
+        itemEl.className = `p-1.5 rounded-lg border-2 transition-all flex items-center justify-between gap-1.5 ${
           item.checked ? 'bg-white border-amber-400 shadow-sm' : 'bg-slate-100/80 border-slate-300 opacity-60'
         }`;
         itemEl.innerHTML = `
-<div class="flex items-center space-x-2 overflow-hidden">
+<div class="flex items-center space-x-1.5 overflow-hidden">
 <input type="checkbox" ${item.checked ? 'checked' : ''}
 onchange="toggleCheck(${item.id})"
 class="w-4 h-4 text-indigo-600 rounded border-2 border-slate-400 focus:ring-0 cursor-pointer">
