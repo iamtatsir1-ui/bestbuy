@@ -11,25 +11,25 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <!-- Google 圓體字型 -->
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
- 
+ 
 <style>
 * {
-  box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* 根字體依照螢幕寬度與高度動態縮放 (Fluid Typography) - 放大 1.3 倍 */
 html {
-  font-size: clamp(14.3px, 1.56vw, 20.8px);
+  font-size: clamp(14.3px, 1.56vw, 20.8px);
 }
 html, body {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  font-family: 'Zen Maru Gothic', 'M PLUS Rounded 1c', sans-serif;
-  background-color: #f0fdf4;
-  background-image: radial-gradient(#cbd5e1 2px, transparent 2px);
-  background-size: 24px 24px;
-  margin: 0;
-  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: 'Zen Maru Gothic', 'M PLUS Rounded 1c', sans-serif;
+  background-color: #f0fdf4;
+  background-image: radial-gradient(#cbd5e1 2px, transparent 2px);
+  background-size: 24px 24px;
+  margin: 0;
+  padding: 0;
 }
 /* 視埠動態比例字級類別 - 放大 1.3 倍 */
 .text-fluid-xs { font-size: clamp(0.845rem, 1.105vw, 1.04rem); }
@@ -37,73 +37,73 @@ html, body {
 .text-fluid-base { font-size: clamp(1.105rem, 1.495vw, 1.365rem); }
 .text-fluid-lg { font-size: clamp(1.3rem, 1.755vw, 1.69rem); }
 .kids-card {
-  border: clamp(2px, 0.25vw, 3px) solid #1e293b;
-  box-shadow: clamp(2px, 0.3vw, 4px) clamp(2px, 0.3vw, 4px) 0px #1e293b;
-  border-radius: clamp(0.75rem, 1vw, 1.25rem);
+  border: clamp(2px, 0.25vw, 3px) solid #1e293b;
+  box-shadow: clamp(2px, 0.3vw, 4px) clamp(2px, 0.3vw, 4px) 0px #1e293b;
+  border-radius: clamp(0.75rem, 1vw, 1.25rem);
 }
- 
+ 
 .kids-btn {
-  border: clamp(1.5px, 0.2vw, 2.5px) solid #1e293b;
-  box-shadow: clamp(1.5px, 0.2vw, 2.5px) clamp(1.5px, 0.2vw, 2.5px) 0px #1e293b;
-  transition: all 0.1s ease;
+  border: clamp(1.5px, 0.2vw, 2.5px) solid #1e293b;
+  box-shadow: clamp(1.5px, 0.2vw, 2.5px) clamp(1.5px, 0.2vw, 2.5px) 0px #1e293b;
+  transition: all 0.1s ease;
 }
- 
+ 
 .kids-btn:active {
-  transform: translate(1.5px, 1.5px);
-  box-shadow: 0px 0px 0px #1e293b;
+  transform: translate(1.5px, 1.5px);
+  box-shadow: 0px 0px 0px #1e293b;
 }
- 
+ 
 .kids-input {
-  border: clamp(1.5px, 0.2vw, 2px) solid #94a3b8;
-  border-radius: clamp(0.4rem, 0.6vw, 0.65rem);
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  border: clamp(1.5px, 0.2vw, 2px) solid #94a3b8;
+  border-radius: clamp(0.4rem, 0.6vw, 0.65rem);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
- 
+ 
 .kids-input:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 clamp(2px, 0.3vw, 4px) rgba(37, 99, 235, 0.2);
+  border-color: #2563eb;
+  box-shadow: 0 0 0 clamp(2px, 0.3vw, 4px) rgba(37, 99, 235, 0.2);
 }
 /* 自訂內部區域動態捲動條 */
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 5px;
+  height: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
-  border-radius: 4px;
+  background: #f1f5f9;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
+  background: #cbd5e1;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #94a3b8;
 }
 /* 公式區：允許向下滾動檢視全部內容，高度約 1.5 倍 */
 #detailedFormulaDisplay {
-  overflow-y: auto;
-  line-height: 1.35;
-  min-height: calc(1.35em * 2 * 1.4);
-  max-height: calc(1.35em * 2 * 1.4);
+  overflow-y: auto;
+  line-height: 1.35;
+  min-height: calc(1.35em * 2 * 1.4);
+  max-height: calc(1.35em * 2 * 1.4);
 }
 /* 輸入表單自動縮放時的過渡 */
 #itemForm {
-  transition: font-size 0.15s ease;
+  transition: font-size 0.15s ease;
 }
- 
+ 
 /* ========== 整頁自動縮放容器 ========== */
 #scaleWrapper {
-  transform-origin: top left;
-  transition: transform 0.15s ease;
-  width: 100%;
-  height: 100%;
+  transform-origin: top left;
+  transition: transform 0.15s ease;
+  width: 100%;
+  height: 100%;
 }
 </style>
 </head>
 <body class="p-1 md:p-1.5 text-slate-800 select-none flex flex-col h-screen overflow-hidden">
 <div id="scaleWrapper" class="max-w-[1600px] w-full mx-auto flex flex-col h-full space-y-1 md:space-y-1.5 min-h-0">
- 
+ 
 <!-- ================= 頂部頁頭與控制區 ================= -->
 <header class="kids-card bg-amber-300 px-2 py-1 flex-shrink-0">
 <div class="flex items-center justify-between gap-1.5 flex-wrap sm:flex-nowrap">
@@ -118,14 +118,14 @@ html, body {
 </h1>
 </div>
 </div>
-<!-- 預算與活動人數輸入區域 -->
+<!-- 預算與活動人數輸入區域（預設留空） -->
 <div class="flex items-center gap-1.5 flex-wrap">
 <!-- 預算輸入 -->
 <div class="flex items-center space-x-1 bg-emerald-100 border-2 border-emerald-400 px-1.5 py-0.5 rounded-xl">
 <label for="totalBudget" class="text-fluid-xs font-black text-emerald-950 flex items-center gap-1 shrink-0">
 <i class="fa-solid fa-wallet text-emerald-600"></i> 預算($)：
 </label>
-<input type="number" id="totalBudget" min="0" value="" step="any"
+<input type="number" id="totalBudget" min="0" value="" placeholder="0" step="any"
 class="w-18 text-center text-fluid-xs font-extrabold text-emerald-700 kids-input bg-white py-0.5"
 oninput="render()">
 </div>
@@ -134,7 +134,7 @@ oninput="render()">
 <label for="activityPeople" class="text-fluid-xs font-black text-indigo-950 flex items-center gap-1 shrink-0">
 <i class="fa-solid fa-users text-indigo-600"></i> 人數：
 </label>
-<input type="number" id="activityPeople" min="1" value="" step="1"
+<input type="number" id="activityPeople" min="1" value="" placeholder="0" step="1"
 class="w-11 text-center text-fluid-xs font-extrabold text-indigo-700 kids-input bg-white py-0.5"
 oninput="render()">
 <span class="text-fluid-xs font-black text-indigo-950 shrink-0">人</span>
@@ -144,11 +144,11 @@ oninput="render()">
 </header>
 <!-- ================= 主要兩欄 Layout (左 1/5 比例, 右 4/5 比例) ================= -->
 <main class="grid grid-cols-1 md:grid-cols-5 gap-1 md:gap-1.5 flex-1 min-h-0 overflow-hidden">
- 
+ 
 <!-- ================= 左欄：輸入購物資料 ================= -->
 <section class="md:col-span-1 flex flex-col h-full min-h-0">
 <div class="kids-card bg-white p-1.5 flex flex-col h-full justify-between overflow-hidden">
- 
+ 
 <div class="flex items-center justify-between border-b-2 border-amber-200 pb-0.5 flex-shrink-0">
 <h2 class="text-fluid-xs font-black text-indigo-700 flex items-center gap-1 truncate">
 <i class="fa-solid fa-pen-to-square"></i> 輸入購物資料
@@ -193,14 +193,6 @@ class="w-full pl-11 pr-6 p-0.5 text-fluid-xs font-bold kids-input text-left">
 <span class="absolute right-1.5 text-fluid-xs font-bold text-slate-400 pointer-events-none">件</span>
 </div>
 </div>
-<!-- 優惠（此價可買件數） -->
-<div class="flex flex-col space-y-0.5">
-<label class="font-extrabold text-slate-700">
-優惠（此價可買件數）：
-</label>
-<input type="number" id="itemPromo" min="1" step="any" placeholder="$10/2件"
-class="w-full p-0.5 text-fluid-xs font-bold kids-input bg-yellow-50 text-slate-700 placeholder:text-slate-400">
-</div>
 <!-- 單售價與購買數量：預設空白、必填 -->
 <div class="grid grid-cols-2 gap-1">
 <div class="flex flex-col space-y-0.5">
@@ -220,6 +212,15 @@ oninput="calculateFormSubtotal()"
 class="w-full p-0.5 text-fluid-xs font-bold kids-input bg-orange-50">
 </div>
 </div>
+<!-- 優惠(此價可買件數) -->
+<div class="flex flex-col space-y-0.5">
+<label class="font-extrabold text-slate-700 truncate">
+優惠(此價可買件數)：
+</label>
+<input type="number" id="itemPromoCount" min="1" step="any" placeholder="例如$10/6件，輸入6"
+oninput="calculateFormSubtotal()"
+class="w-full p-0.5 text-fluid-xs font-bold kids-input bg-amber-50/70 placeholder:text-slate-400 placeholder:font-normal">
+</div>
 <!-- 單項總價預覽 -->
 <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-0.5 flex justify-between items-center my-0.5 shrink-0">
 <span class="font-bold text-indigo-900 flex items-center gap-0.5">
@@ -227,7 +228,7 @@ class="w-full p-0.5 text-fluid-xs font-bold kids-input bg-orange-50">
 </span>
 <span class="font-black text-indigo-600 text-fluid-sm" id="formSubtotalDisplay">$ 0</span>
 </div>
-<!-- 按鈕區：主按鈕兼任加入／儲存修改；已移除獨立「儲存」鍵 -->
+<!-- 按鈕區：主按鈕兼任加入／儲存修改 -->
 <div class="flex flex-col space-y-0.5 flex-shrink-0 pt-0.5">
 <button type="submit" id="addBtn"
 class="kids-btn bg-emerald-400 hover:bg-emerald-500 text-slate-900 font-extrabold py-1 rounded-lg flex items-center justify-center gap-1 text-fluid-xs">
@@ -258,7 +259,7 @@ class="kids-btn bg-slate-200 hover:bg-slate-300 text-slate-800 font-extrabold py
 </div>
 </section>
 </main>
-<!-- ================= 下方：公式區加高 1.5 倍，兩格同步縮短 ================= -->
+<!-- ================= 下方：公式區加高 1.5 倍，摘要格同步縮短 ================= -->
 <footer class="kids-card bg-amber-100 p-1 md:p-1.5 flex-shrink-0 flex flex-col space-y-0.5 min-h-0">
 <!-- 1. 詳細算式列（高度約 1.5 倍，可滾動） -->
 <div class="bg-white px-1.5 py-1 rounded-xl border-2 border-amber-300 space-y-0.5 shadow-sm flex-1 min-h-0 flex flex-col">
@@ -270,7 +271,7 @@ class="kids-btn bg-slate-200 hover:bg-slate-300 text-slate-800 font-extrabold py
 <!-- JS 動態寫入內容 -->
 </div>
 </div>
-<!-- 2. 兩格摘要（高度再縮短，剛好包住文字） -->
+<!-- 2. 兩格摘要 -->
 <div class="grid grid-cols-2 gap-1 flex-none">
 <div class="bg-white px-1 py-0 rounded-md border-2 border-amber-300 flex flex-row items-center justify-center gap-0.5 min-h-0">
 <span class="text-fluid-xs font-bold text-slate-600 shrink-0">勾選總支出：</span>
@@ -296,335 +297,321 @@ let nextId = 1;
 const DEFAULT_VISIBLE_CATEGORIES = ['食物種類A', '食物種類B', '飲品類'];
 // 所有支援的類別清單
 const ALL_CATEGORIES = ['食物種類A', '食物種類B', '食物種類C', '飲品類', '其他'];
- 
+ 
 // ========== 整頁自動縮放核心邏輯（針對 iPad 9 橫向優化） ==========
 function autoScalePage() {
-  const wrapper = document.getElementById('scaleWrapper');
-  if (!wrapper) return;
- 
-  // 先還原縮放，才能正確測量內容真實尺寸
-  wrapper.style.transform = 'scale(1)';
-  wrapper.style.width = '100%';
-  wrapper.style.height = '100%';
- 
-  // 取得可用視窗尺寸（扣除 body 的 padding）
-  const bodyStyle = getComputedStyle(document.body);
-  const padX = (parseFloat(bodyStyle.paddingLeft) || 0) + (parseFloat(bodyStyle.paddingRight) || 0);
-  const padY = (parseFloat(bodyStyle.paddingTop) || 0) + (parseFloat(bodyStyle.paddingBottom) || 0);
- 
-  const availableWidth = window.innerWidth - padX;
-  const availableHeight = window.innerHeight - padY;
- 
-  // 測量內容實際需要的尺寸
-  const contentWidth = wrapper.scrollWidth;
-  const contentHeight = wrapper.scrollHeight;
- 
-  // 計算適合的縮放比例（取較小者，確保寬高都容納）
-  let scale = Math.min(
-    availableWidth / contentWidth,
-    availableHeight / contentHeight,
-    1 // 不放大超過 100%
-  );
- 
-  // 設定下限，避免過小導致無法操作（iPad 9 橫向建議不低于 0.52）
-  const minScale = 0.52;
-  if (scale < minScale) scale = minScale;
- 
-  // 套用縮放
-  wrapper.style.transform = `scale(${scale})`;
-  // 調整寬高補償，讓縮放後仍填滿可視區域
-  wrapper.style.width = (100 / scale) + '%';
-  wrapper.style.height = (100 / scale) + '%';
+  const wrapper = document.getElementById('scaleWrapper');
+  if (!wrapper) return;
+ 
+  wrapper.style.transform = 'scale(1)';
+  wrapper.style.width = '100%';
+  wrapper.style.height = '100%';
+ 
+  const bodyStyle = getComputedStyle(document.body);
+  const padX = (parseFloat(bodyStyle.paddingLeft) || 0) + (parseFloat(bodyStyle.paddingRight) || 0);
+  const padY = (parseFloat(bodyStyle.paddingTop) || 0) + (parseFloat(bodyStyle.paddingBottom) || 0);
+ 
+  const availableWidth = window.innerWidth - padX;
+  const availableHeight = window.innerHeight - padY;
+ 
+  const contentWidth = wrapper.scrollWidth;
+  const contentHeight = wrapper.scrollHeight;
+ 
+  let scale = Math.min(
+    availableWidth / contentWidth,
+    availableHeight / contentHeight,
+    1
+  );
+ 
+  const minScale = 0.52;
+  if (scale < minScale) scale = minScale;
+ 
+  wrapper.style.transform = `scale(${scale})`;
+  wrapper.style.width = (100 / scale) + '%';
+  wrapper.style.height = (100 / scale) + '%';
 }
- 
-// 格式化數字顯示：不進行四捨五入，去除浮點數計算微小誤差
+ 
+// 格式化數字顯示
 function formatRealNumber(num) {
-  if (isNaN(num) || num === null) return '0';
-  return parseFloat(num.toFixed(10)).toString();
+  if (isNaN(num) || num === null) return '0';
+  return parseFloat(num.toFixed(10)).toString();
 }
- 
+ 
+// 計算單項項目的總價：每滿 promoCount 件收一個單價 p，不足 promoCount 件的尾數按原單價 p 逐件計算
+function calculateItemSubtotal(price, qty, promoCount) {
+  const p = parseFloat(price) || 0;
+  const q = parseFloat(qty) || 0;
+  const promo = (parseFloat(promoCount) > 0) ? parseFloat(promoCount) : 1;
+  
+  if (q <= 0) return 0;
+  
+  const fullGroups = Math.floor(q / promo);
+  const remainder = q % promo;
+  
+  return (fullGroups + remainder) * p;
+}
+ 
 // 頁面初始化
 window.onload = function() {
-  calculateFormSubtotal();
-  render();
-  fitFormContent();
-  // 延遲執行整頁縮放，確保 DOM 與字型都已就緒（iPad 需要稍長時間）
-  setTimeout(autoScalePage, 80);
-  setTimeout(autoScalePage, 200); // 二次確認，避免字型載入延遲
+  calculateFormSubtotal();
+  render();
+  fitFormContent();
+  setTimeout(autoScalePage, 80);
+  setTimeout(autoScalePage, 200);
 };
- 
-// 視窗大小改變時重新縮放
+ 
 window.addEventListener('resize', function() {
-  fitFormContent();
-  autoScalePage();
+  fitFormContent();
+  autoScalePage();
 });
- 
-// 顯示訊息彈窗
+ 
 function showToast(msg) {
-  const toast = document.getElementById('toast');
-  const toastMsg = document.getElementById('toastMsg');
-  toastMsg.textContent = msg;
-  toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
-  setTimeout(() => {
-    toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
-  }, 2000);
+  const toast = document.getElementById('toast');
+  const toastMsg = document.getElementById('toastMsg');
+  toastMsg.textContent = msg;
+  toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+  setTimeout(() => {
+    toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+  }, 2000);
 }
- 
+ 
 // 即時計算左欄表單小計預覽
 function calculateFormSubtotal() {
-  const price = parseFloat(document.getElementById('itemPrice').value) || 0;
-  const qty = parseFloat(document.getElementById('itemQty').value) || 0;
-  const subtotal = price * qty;
-  document.getElementById('formSubtotalDisplay').textContent = `$ ${formatRealNumber(subtotal)}`;
+  const price = parseFloat(document.getElementById('itemPrice').value) || 0;
+  const qty = parseFloat(document.getElementById('itemQty').value) || 0;
+  const promoCount = parseFloat(document.getElementById('itemPromoCount').value) || 1;
+  const subtotal = calculateItemSubtotal(price, qty, promoCount);
+  document.getElementById('formSubtotalDisplay').textContent = `$ ${formatRealNumber(subtotal)}`;
 }
- 
-/**
- * 自動縮放「輸入購物資料」表單字級
- * 確保所有內容能在不用下拉的情況下完整顯示於格內
- */
+ 
 function fitFormContent() {
-  const form = document.getElementById('itemForm');
-  if (!form) return;
- 
-  // 先重設字級，讓測量準確
-  form.style.fontSize = '';
- 
-  // 取得可用高度
-  const availableHeight = form.clientHeight;
-  if (availableHeight <= 0) return;
- 
-  let currentSize = 100; // 百分比
-  const minSize = 52;    // 最小縮放比例，避免過小
-  const step = 2;
- 
-  // 逐步縮小直到內容完整容納
-  while (form.scrollHeight > availableHeight + 2 && currentSize > minSize) {
-    currentSize -= step;
-    form.style.fontSize = currentSize + '%';
-  }
+  const form = document.getElementById('itemForm');
+  if (!form) return;
+ 
+  form.style.fontSize = '';
+  const availableHeight = form.clientHeight;
+  if (availableHeight <= 0) return;
+ 
+  let currentSize = 100;
+  const minSize = 52;
+  const step = 2;
+ 
+  while (form.scrollHeight > availableHeight + 2 && currentSize > minSize) {
+    currentSize -= step;
+    form.style.fontSize = currentSize + '%';
+  }
 }
- 
-// 提交表單：有 editingId 則更新，否則新增（包裝件數、買幾包、單價皆必填）
+ 
 function handleFormSubmit(e) {
-  e.preventDefault();
- 
-  const category = document.getElementById('itemCategory').value;
-  const name = document.getElementById('itemName').value.trim();
-  const packagingVal = document.getElementById('itemPackaging').value;
-  const promoVal = document.getElementById('itemPromo').value;
-  const priceVal = document.getElementById('itemPrice').value;
-  const qtyVal = document.getElementById('itemQty').value;
- 
-  if (!name) {
-    showToast('請輸入物品名稱喔！');
-    return;
-  }
-  if (packagingVal === '' || packagingVal === null) {
-    showToast('請填寫包裝件數！');
-    return;
-  }
-  if (priceVal === '' || priceVal === null) {
-    showToast('請填寫單價！');
-    return;
-  }
-  if (qtyVal === '' || qtyVal === null) {
-    showToast('請填寫買幾包！');
-    return;
-  }
- 
-  const packagingNum = parseFloat(packagingVal);
-  const promoNum = promoVal === '' ? null : parseFloat(promoVal);
-  const price = parseFloat(priceVal);
-  const qty = parseFloat(qtyVal);
- 
-  if (isNaN(packagingNum) || packagingNum < 1) {
-    showToast('包裝件數須為 ≥ 1 的數字！');
-    return;
-  }
-  if (promoVal !== '' && (isNaN(promoNum) || promoNum < 1)) {
-    showToast('優惠件數須為 ≥ 1 的數字！');
-    return;
-  }
-  if (isNaN(price) || price < 0) {
-    showToast('單價須為 ≥ 0 的數字！');
-    return;
-  }
-  if (isNaN(qty) || qty < 1) {
-    showToast('買幾包須為 ≥ 1 的數字！');
-    return;
-  }
- 
-  const editingId = document.getElementById('editingId').value;
- 
-  if (editingId) {
-    // 儲存修改
-    const id = parseInt(editingId);
-    const index = items.findIndex(i => i.id === id);
-    if (index !== -1) {
-      items[index].category = category;
-      items[index].name = name;
-      items[index].packaging = packagingNum;
-      items[index].promo = promoNum;
-      items[index].price = price;
-      items[index].qty = qty;
-      showToast(`已成功修改：「${name}」！`);
-      clearForm();
-      render();
-    }
-  } else {
-    // 新增
-    const newItem = {
-      id: nextId++,
-      category: category,
-      name: name,
-      packaging: packagingNum,
-      promo: promoNum,
-      price: price,
-      qty: qty,
-      checked: true
-    };
-    items.push(newItem);
-    showToast(`已加入「${category}：${name}」！`);
-    clearForm();
-    render();
-  }
+  e.preventDefault();
+ 
+  const category = document.getElementById('itemCategory').value;
+  const name = document.getElementById('itemName').value.trim();
+  const packagingVal = document.getElementById('itemPackaging').value;
+  const priceVal = document.getElementById('itemPrice').value;
+  const qtyVal = document.getElementById('itemQty').value;
+  const promoVal = document.getElementById('itemPromoCount').value;
+ 
+  if (!name) {
+    showToast('請輸入物品名稱喔！');
+    return;
+  }
+  if (packagingVal === '' || packagingVal === null) {
+    showToast('請填寫包裝件數！');
+    return;
+  }
+  if (priceVal === '' || priceVal === null) {
+    showToast('請填寫單價！');
+    return;
+  }
+  if (qtyVal === '' || qtyVal === null) {
+    showToast('請填寫買幾包！');
+    return;
+  }
+ 
+  const packagingNum = parseFloat(packagingVal);
+  const price = parseFloat(priceVal);
+  const qty = parseFloat(qtyVal);
+  const promoCount = (promoVal === '' || promoVal === null) ? 1 : parseFloat(promoVal);
+ 
+  if (isNaN(packagingNum) || packagingNum < 1) {
+    showToast('包裝件數須為 ≥ 1 的數字！');
+    return;
+  }
+  if (isNaN(price) || price < 0) {
+    showToast('單價須為 ≥ 0 的數字！');
+    return;
+  }
+  if (isNaN(qty) || qty < 1) {
+    showToast('買幾包須為 ≥ 1 的數字！');
+    return;
+  }
+  if (isNaN(promoCount) || promoCount < 1) {
+    showToast('優惠件數須為 ≥ 1 的數字！');
+    return;
+  }
+ 
+  const editingId = document.getElementById('editingId').value;
+ 
+  if (editingId) {
+    const id = parseInt(editingId);
+    const index = items.findIndex(i => i.id === id);
+    if (index !== -1) {
+      items[index].category = category;
+      items[index].name = name;
+      items[index].packaging = packagingNum;
+      items[index].price = price;
+      items[index].qty = qty;
+      items[index].promoCount = promoCount;
+      showToast(`已成功修改：「${name}」！`);
+      clearForm();
+      render();
+    }
+  } else {
+    const newItem = {
+      id: nextId++,
+      category: category,
+      name: name,
+      packaging: packagingNum,
+      price: price,
+      qty: qty,
+      promoCount: promoCount,
+      checked: true
+    };
+    items.push(newItem);
+    showToast(`已加入：「${category}：${name}」！`);
+    clearForm();
+    render();
+  }
 }
- 
-// 清除表單輸入（包裝件數、買幾包、單價、優惠皆留空）
+ 
 function clearForm() {
-  document.getElementById('itemForm').reset();
-  document.getElementById('editingId').value = '';
-  document.getElementById('itemPackaging').value = '';
-  document.getElementById('itemPromo').value = '';
-  document.getElementById('itemQty').value = '';
-  document.getElementById('itemPrice').value = '';
- 
-  document.getElementById('modeBadge').textContent = '新增模式';
-  document.getElementById('modeBadge').className = 'bg-emerald-100 text-emerald-800 text-fluid-xs font-black px-1.5 py-0.5 rounded-full border border-emerald-400 shrink-0';
- 
-  const addBtn = document.getElementById('addBtn');
-  addBtn.disabled = false;
-  addBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-  document.getElementById('addBtnText').textContent = '加入購物清單';
-  addBtn.querySelector('i').className = 'fa-solid fa-plus';
- 
-  calculateFormSubtotal();
-  // 清除後重新檢查縮放
-  requestAnimationFrame(() => {
-    fitFormContent();
-    autoScalePage();
-  });
+  document.getElementById('itemForm').reset();
+  document.getElementById('editingId').value = '';
+  document.getElementById('itemPackaging').value = '';
+  document.getElementById('itemQty').value = '';
+  document.getElementById('itemPrice').value = '';
+  document.getElementById('itemPromoCount').value = '';
+ 
+  document.getElementById('modeBadge').textContent = '新增模式';
+  document.getElementById('modeBadge').className = 'bg-emerald-100 text-emerald-800 text-fluid-xs font-black px-1.5 py-0.5 rounded-full border border-emerald-400 shrink-0';
+ 
+  const addBtn = document.getElementById('addBtn');
+  addBtn.disabled = false;
+  addBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+  document.getElementById('addBtnText').textContent = '加入購物清單';
+  addBtn.querySelector('i').className = 'fa-solid fa-plus';
+ 
+  calculateFormSubtotal();
+  requestAnimationFrame(() => {
+    fitFormContent();
+    autoScalePage();
+  });
 }
- 
-// 載入項目資料至左欄進行修改（主按鈕改為「儲存修改」）
+ 
 function prepareEdit(id) {
-  const item = items.find(i => i.id === id);
-  if (!item) return;
-  document.getElementById('editingId').value = item.id;
-  document.getElementById('itemCategory').value = item.category;
-  document.getElementById('itemName').value = item.name;
-  document.getElementById('itemPackaging').value = item.packaging;
-  document.getElementById('itemPromo').value = item.promo !== null && item.promo !== undefined ? item.promo : '';
-  document.getElementById('itemPrice').value = item.price;
-  document.getElementById('itemQty').value = item.qty;
-  document.getElementById('modeBadge').textContent = '修改模式';
-  document.getElementById('modeBadge').className = 'bg-amber-100 text-amber-800 text-fluid-xs font-black px-1.5 py-0.5 rounded-full border border-amber-400 shrink-0';
- 
-  const addBtn = document.getElementById('addBtn');
-  addBtn.disabled = false;
-  addBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-  document.getElementById('addBtnText').textContent = '儲存修改';
-  addBtn.querySelector('i').className = 'fa-solid fa-floppy-disk';
- 
-  calculateFormSubtotal();
-  showToast(`正在編輯：「${item.name}」`);
-  requestAnimationFrame(() => {
-    fitFormContent();
-    autoScalePage();
-  });
+  const item = items.find(i => i.id === id);
+  if (!item) return;
+  document.getElementById('editingId').value = item.id;
+  document.getElementById('itemCategory').value = item.category;
+  document.getElementById('itemName').value = item.name;
+  document.getElementById('itemPackaging').value = item.packaging;
+  document.getElementById('itemPrice').value = item.price;
+  document.getElementById('itemQty').value = item.qty;
+  document.getElementById('itemPromoCount').value = item.promoCount > 1 ? item.promoCount : '';
+  document.getElementById('modeBadge').textContent = '修改模式';
+  document.getElementById('modeBadge').className = 'bg-amber-100 text-amber-800 text-fluid-xs font-black px-1.5 py-0.5 rounded-full border border-amber-400 shrink-0';
+ 
+  const addBtn = document.getElementById('addBtn');
+  addBtn.disabled = false;
+  addBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+  document.getElementById('addBtnText').textContent = '儲存修改';
+  addBtn.querySelector('i').className = 'fa-solid fa-floppy-disk';
+ 
+  calculateFormSubtotal();
+  showToast(`正在編輯：「${item.name}」`);
+  requestAnimationFrame(() => {
+    fitFormContent();
+    autoScalePage();
+  });
 }
- 
-// 刪除購物項目
+ 
 function deleteItem(id) {
-  const item = items.find(i => i.id === id);
-  if (item) {
-    items = items.filter(i => i.id !== id);
-    showToast(`已刪除：「${item.name}」`);
-    if (parseInt(document.getElementById('editingId').value) === id) {
-      clearForm();
-    }
-    render();
-  }
+  const item = items.find(i => i.id === id);
+  if (item) {
+    items = items.filter(i => i.id !== id);
+    showToast(`已刪除：「${item.name}」`);
+    if (parseInt(document.getElementById('editingId').value) === id) {
+      clearForm();
+    }
+    render();
+  }
 }
- 
-// 切換勾選狀態
+ 
 function toggleCheck(id) {
-  const item = items.find(i => i.id === id);
-  if (item) {
-    item.checked = !item.checked;
-    render();
-  }
+  const item = items.find(i => i.id === id);
+  if (item) {
+    item.checked = !item.checked;
+    render();
+  }
 }
- 
-// 將公式文字縮放至最多 2 行內完整顯示（保留，但已改為可滾動）
+ 
 function fitFormulaToTwoLines() {
-  const el = document.getElementById('detailedFormulaDisplay');
-  if (!el) return;
-  el.style.fontSize = '';
-  if (el.querySelector('.text-slate-400')) return;
-  const computed = getComputedStyle(el);
-  const lineHeight = parseFloat(computed.lineHeight) || (parseFloat(computed.fontSize) * 1.35);
-  const maxHeight = lineHeight * 2 + 2;
-  let fontSize = parseFloat(computed.fontSize);
-  const minFontSize = 9;
-  while (el.scrollHeight > maxHeight && fontSize > minFontSize) {
-    fontSize -= 0.5;
-    el.style.fontSize = fontSize + 'px';
-  }
+  const el = document.getElementById('detailedFormulaDisplay');
+  if (!el) return;
+  el.style.fontSize = '';
+  if (el.querySelector('.text-slate-400')) return;
+  const computed = getComputedStyle(el);
+  const lineHeight = parseFloat(computed.lineHeight) || (parseFloat(computed.fontSize) * 1.35);
+  const maxHeight = lineHeight * 2 + 2;
+  let fontSize = parseFloat(computed.fontSize);
+  const minFontSize = 9;
+  while (el.scrollHeight > maxHeight && fontSize > minFontSize) {
+    fontSize -= 0.5;
+    el.style.fontSize = fontSize + 'px';
+  }
 }
- 
-// 根據類別回傳對應文字顏色 class
+ 
 function getCategoryTextColor(cat) {
-  if (cat === '食物種類A') return 'text-amber-900';      // 深啡色
-  if (cat === '食物種類B') return 'text-emerald-800';    // 深綠色
-  if (cat === '食物種類C') return 'text-purple-700';     // 紫色
-  if (cat === '飲品類') return 'text-blue-600';          // 藍色
-  return 'text-indigo-900';                             // 其他預設
+  if (cat === '食物種類A') return 'text-amber-900';
+  if (cat === '食物種類B') return 'text-emerald-800';
+  if (cat === '食物種類C') return 'text-purple-700';
+  if (cat === '飲品類') return 'text-blue-600';
+  return 'text-indigo-900';
 }
- 
-// 渲染畫面
+ 
 function render() {
-  const categoryContainers = document.getElementById('categoryContainers');
-  categoryContainers.innerHTML = '';
-  const activeCategories = ALL_CATEGORIES.filter(cat => {
-    if (DEFAULT_VISIBLE_CATEGORIES.includes(cat)) return true;
-    return items.some(item => item.category === cat);
-  });
-  activeCategories.forEach(cat => {
-    const catItems = items.filter(item => item.category === cat);
- 
-    let headerBadgeStyle = 'bg-sky-500 text-white';
-    let cardBorderStyle = 'border-sky-300 bg-sky-50/40';
- 
-    if (cat === '食物種類A') {
-      headerBadgeStyle = 'bg-amber-900 text-white';          // 深啡色
-      cardBorderStyle = 'border-amber-800 bg-amber-50/40';
-    } else if (cat === '食物種類B') {
-      headerBadgeStyle = 'bg-emerald-800 text-white';        // 深綠色
-      cardBorderStyle = 'border-emerald-700 bg-emerald-50/40';
-    } else if (cat === '食物種類C') {
-      headerBadgeStyle = 'bg-purple-700 text-white';         // 紫色
-      cardBorderStyle = 'border-purple-600 bg-purple-50/40';
-    } else if (cat === '飲品類') {
-      headerBadgeStyle = 'bg-blue-500 text-white';
-      cardBorderStyle = 'border-blue-300 bg-blue-50/40';
-    } else if (cat === '其他') {
-      headerBadgeStyle = 'bg-purple-500 text-white';
-      cardBorderStyle = 'border-purple-300 bg-purple-50/40';
-    }
-    const catCard = document.createElement('div');
-    catCard.className = `rounded-xl border-2 p-1.5 ${cardBorderStyle} space-y-1`;
-    let catHeaderHtml = `
+  const categoryContainers = document.getElementById('categoryContainers');
+  categoryContainers.innerHTML = '';
+  const activeCategories = ALL_CATEGORIES.filter(cat => {
+    if (DEFAULT_VISIBLE_CATEGORIES.includes(cat)) return true;
+    return items.some(item => item.category === cat);
+  });
+  activeCategories.forEach(cat => {
+    const catItems = items.filter(item => item.category === cat);
+ 
+    let headerBadgeStyle = 'bg-sky-500 text-white';
+    let cardBorderStyle = 'border-sky-300 bg-sky-50/40';
+ 
+    if (cat === '食物種類A') {
+      headerBadgeStyle = 'bg-amber-900 text-white';
+      cardBorderStyle = 'border-amber-800 bg-amber-50/40';
+    } else if (cat === '食物種類B') {
+      headerBadgeStyle = 'bg-emerald-800 text-white';
+      cardBorderStyle = 'border-emerald-700 bg-emerald-50/40';
+    } else if (cat === '食物種類C') {
+      headerBadgeStyle = 'bg-purple-700 text-white';
+      cardBorderStyle = 'border-purple-600 bg-purple-50/40';
+    } else if (cat === '飲品類') {
+      headerBadgeStyle = 'bg-blue-500 text-white';
+      cardBorderStyle = 'border-blue-300 bg-blue-50/40';
+    } else if (cat === '其他') {
+      headerBadgeStyle = 'bg-purple-500 text-white';
+      cardBorderStyle = 'border-purple-300 bg-purple-300/40';
+    }
+    const catCard = document.createElement('div');
+    catCard.className = `rounded-xl border-2 p-1.5 ${cardBorderStyle} space-y-1`;
+    let catHeaderHtml = `
 <div class="flex items-center justify-between border-b pb-0.5 border-slate-300/60">
 <span class="text-fluid-xs font-black px-1.5 py-0.5 rounded-lg shadow-sm ${headerBadgeStyle}">
 📌 ${cat}
@@ -634,31 +621,31 @@ function render() {
 </span>
 </div>
 `;
-    catCard.innerHTML = catHeaderHtml;
-    const itemListContainer = document.createElement('div');
-    itemListContainer.className = "space-y-1 pt-0.5";
-    if (catItems.length === 0) {
-      itemListContainer.innerHTML = `
+    catCard.innerHTML = catHeaderHtml;
+    const itemListContainer = document.createElement('div');
+    itemListContainer.className = "space-y-1 pt-0.5";
+    if (catItems.length === 0) {
+      itemListContainer.innerHTML = `
 <div class="text-fluid-xs font-bold text-slate-400 italic py-1 px-2 bg-white/70 rounded-lg border border-dashed border-slate-300 text-center">
 💡 提示：請考慮採購此類別項目（從左邊輸入）
 </div>
 `;
-    } else {
-      catItems.forEach(item => {
-        const itemSubtotal = item.price * item.qty;
-        const promoText = (item.promo !== null && item.promo !== undefined)
-          ? `<span>優惠: <strong class="text-amber-700">${formatRealNumber(item.promo)}件</strong></span><span>•</span>`
-          : '';
-        const itemEl = document.createElement('div');
-        itemEl.className = `p-1.5 rounded-lg border-2 transition-all flex items-center justify-between gap-1.5 ${
-          item.checked ? 'bg-white border-amber-400 shadow-sm' : 'bg-slate-100/80 border-slate-300 opacity-60'
-        }`;
-        itemEl.innerHTML = `
+    } else {
+      catItems.forEach(item => {
+        const itemSubtotal = calculateItemSubtotal(item.price, item.qty, item.promoCount);
+        const promoText = item.promoCount && item.promoCount > 1
+          ? `<span>•</span><span class="text-amber-700">優惠: <strong>$${formatRealNumber(item.price)}/${formatRealNumber(item.promoCount)}件</strong></span>`
+          : '';
+        const itemEl = document.createElement('div');
+        itemEl.className = `p-1.5 rounded-lg border-2 transition-all flex items-center justify-between gap-1.5 ${
+          item.checked ? 'bg-white border-amber-400 shadow-sm' : 'bg-slate-100/80 border-slate-300 opacity-60'
+        }`;
+        itemEl.innerHTML = `
 <div class="flex items-center space-x-1.5 overflow-hidden">
 <input type="checkbox" ${item.checked ? 'checked' : ''}
 onchange="toggleCheck(${item.id})"
 class="w-4 h-4 text-indigo-600 rounded border-2 border-slate-400 focus:ring-0 cursor-pointer">
- 
+ 
 <div class="truncate">
 <div class="font-black text-slate-800 text-fluid-sm truncate">
 ${item.name}
@@ -666,10 +653,10 @@ ${item.name}
 <div class="text-fluid-xs font-bold text-slate-500 flex flex-wrap gap-x-1.5">
 <span>每包 <strong class="text-slate-700">${formatRealNumber(item.packaging)}</strong> 件</span>
 <span>•</span>
-${promoText}
 <span>單價: <strong class="text-slate-700">$${formatRealNumber(item.price)}</strong></span>
 <span>•</span>
 <span>數量: <strong class="text-slate-700">${formatRealNumber(item.qty)}</strong></span>
+${promoText}
 </div>
 </div>
 </div>
@@ -687,56 +674,55 @@ class="kids-btn bg-rose-200 hover:bg-rose-300 text-rose-900 px-1.5 py-0.5 rounde
 </button>
 </div>
 `;
-        itemListContainer.appendChild(itemEl);
-      });
-    }
-    catCard.appendChild(itemListContainer);
-    categoryContainers.appendChild(catCard);
-  });
- 
-  // ================= 底部詳細算式與預算計算邏輯 =================
-  const checkedItems = items.filter(i => i.checked);
-  const totalBudget = parseFloat(document.getElementById('totalBudget').value) || 0;
-  const totalSpent = checkedItems.reduce((sum, item) => sum + (item.price * item.qty), 0);
-  const formulaDisplay = document.getElementById('detailedFormulaDisplay');
-  formulaDisplay.style.fontSize = '';
-  if (checkedItems.length === 0) {
-    formulaDisplay.innerHTML = `
+        itemListContainer.appendChild(itemEl);
+      });
+    }
+    catCard.appendChild(itemListContainer);
+    categoryContainers.appendChild(catCard);
+  });
+ 
+  const checkedItems = items.filter(i => i.checked);
+  const totalBudget = parseFloat(document.getElementById('totalBudget').value) || 0;
+  const totalSpent = checkedItems.reduce((sum, item) => sum + calculateItemSubtotal(item.price, item.qty, item.promoCount), 0);
+  const formulaDisplay = document.getElementById('detailedFormulaDisplay');
+  formulaDisplay.style.fontSize = '';
+  if (checkedItems.length === 0) {
+    formulaDisplay.innerHTML = `
 <span class="text-slate-400 font-bold italic">
 <i class="fa-solid fa-circle-info mr-1"></i>請在上方勾選項目以自動列出算式
 </span>
 `;
-  } else {
-    const itemDetailsList = checkedItems.map(item => {
-      const subtotal = item.price * item.qty;
-      const colorClass = getCategoryTextColor(item.category);
-      return `<span class="${colorClass} font-extrabold">${item.category}:${item.name}</span> <span class="text-amber-700 font-bold">($${formatRealNumber(subtotal)})</span>`;
-    });
-    const formulaText = itemDetailsList.join(' <span class="text-rose-500 font-black">+</span> ') +
-      ` <span class="text-slate-800 font-black">=</span> <span class="text-indigo-700 font-black">總支出 ($${formatRealNumber(totalSpent)})</span>`;
-    formulaDisplay.innerHTML = formulaText;
-  }
-  document.getElementById('summaryTotalSpent').textContent = `$ ${formatRealNumber(totalSpent)}`;
-  const remaining = totalBudget - totalSpent;
-  const remainingCard = document.getElementById('remainingCard');
-  const summaryRemaining = document.getElementById('summaryRemaining');
-  const remainingLabel = document.getElementById('remainingLabel');
-  if (remaining >= 0) {
-    remainingCard.className = 'bg-emerald-100 px-1 py-0 rounded-md border-2 border-emerald-400 flex flex-row items-center justify-center gap-0.5 transition-colors duration-300 min-h-0';
-    remainingLabel.textContent = '剩餘預算：';
-    summaryRemaining.className = 'text-fluid-sm font-black text-emerald-700 leading-none';
-    summaryRemaining.textContent = `+$ ${formatRealNumber(remaining)}`;
-  } else {
-    remainingCard.className = 'bg-rose-100 px-1 py-0 rounded-md border-2 border-rose-400 flex flex-row items-center justify-center gap-0.5 transition-colors duration-300 min-h-0';
-    remainingLabel.textContent = '超支金額：';
-    summaryRemaining.className = 'text-fluid-sm font-black text-rose-600 leading-none';
-    summaryRemaining.textContent = `-$ ${formatRealNumber(Math.abs(remaining))} (超支)`;
-  }
-  requestAnimationFrame(() => {
-    fitFormulaToTwoLines();
-    fitFormContent();
-    autoScalePage(); // 每次 render 後重新計算整頁縮放
-  });
+  } else {
+    const itemDetailsList = checkedItems.map(item => {
+      const subtotal = calculateItemSubtotal(item.price, item.qty, item.promoCount);
+      const colorClass = getCategoryTextColor(item.category);
+      return `<span class="${colorClass} font-extrabold">${item.category}:${item.name}</span> <span class="text-amber-700 font-bold">($${formatRealNumber(subtotal)})</span>`;
+    });
+    const formulaText = itemDetailsList.join(' <span class="text-rose-500 font-black">+</span> ') +
+      ` <span class="text-slate-800 font-black">=</span> <span class="text-indigo-700 font-black">總支出 ($${formatRealNumber(totalSpent)})</span>`;
+    formulaDisplay.innerHTML = formulaText;
+  }
+  document.getElementById('summaryTotalSpent').textContent = `$ ${formatRealNumber(totalSpent)}`;
+  const remaining = totalBudget - totalSpent;
+  const remainingCard = document.getElementById('remainingCard');
+  const summaryRemaining = document.getElementById('summaryRemaining');
+  const remainingLabel = document.getElementById('remainingLabel');
+  if (remaining >= 0) {
+    remainingCard.className = 'bg-emerald-100 px-1 py-0 rounded-md border-2 border-emerald-400 flex flex-row items-center justify-center gap-0.5 transition-colors duration-300 min-h-0';
+    remainingLabel.textContent = '剩餘預算：';
+    summaryRemaining.className = 'text-fluid-sm font-black text-emerald-700 leading-none';
+    summaryRemaining.textContent = `+$ ${formatRealNumber(remaining)}`;
+  } else {
+    remainingCard.className = 'bg-rose-100 px-1 py-0 rounded-md border-2 border-rose-400 flex flex-row items-center justify-center gap-0.5 transition-colors duration-300 min-h-0';
+    remainingLabel.textContent = '超支金額：';
+    summaryRemaining.className = 'text-fluid-sm font-black text-rose-600 leading-none';
+    summaryRemaining.textContent = `-$ ${formatRealNumber(Math.abs(remaining))} (超支)`;
+  }
+  requestAnimationFrame(() => {
+    fitFormulaToTwoLines();
+    fitFormContent();
+    autoScalePage();
+  });
 }
 </script>
 </body>
